@@ -1,0 +1,11 @@
+<!--list row information for a single contact.-->
+<ul>
+  <li>First Name:<%=@first.capitalize %></li>
+  <li>Last Name: <%= @contact["last"].capitalize %></li>
+  <li>Age: <%= @contact["age"] %></li>
+  <li>Gender: <%= @contact["gender"] %></li>
+  <li>Down to Get Down (True or False): <%= @contact["dtgd"].capitalize %></li>
+  <li>Phone: <%= @contact["phone"] %></li>
+</ul>
+
+<a href="/">Back to Address Book</a>

@@ -6,16 +6,16 @@
 <!--Home Page: Body (list)-->
 <ul>
 <!--for address list..create loop-->
-<% @contacts.each do |first, value| %>
+<% @ab_contacts.each do |first, value| %>
 
 <li>
-<!--links one: URL/address/first_name -->
+<!--link one: URL/address/first_name -->
 <a href='/address/<%= first["first"] %>'><%= first["first"].capitalize %></a>
 <li>
 <!--close list-->
 <% end %>
 </ul>
 
-<!--links two: allows you to enter new contacts-->
+<!--link two: allows you to enter new contacts-->
 <p><a href="/new_contact">Enter New Contact</a></p>
 
