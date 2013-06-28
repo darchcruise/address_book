@@ -9,13 +9,13 @@
 <% @contacts.each do |first, value| %>
 
 <li>
-<!--links two: URL/address/first_name -->
+<!--links one: URL/address/first_name -->
 <a href='/address/<%= first["first"] %>'><%= first["first"].capitalize %></a>
 <li>
 <!--close list-->
 <% end %>
 </ul>
 
-<!--links one: allows you to enter new contacts-->
+<!--links two: allows you to enter new contacts-->
 <p><a href="/new_contact">Enter New Contact</a></p>
 
