@@ -29,6 +29,23 @@ get '/address/:first' do # single contact
   erb :single_contact
 end
 
-get '/new contact' do
+get '/new_contact' do
   erb :input
 end
+
+post '/new contact' do
+  @first = params[:first]
+  @last = params[:last]
+  @age = params[:age].to_i
+  @gender = params[:gender]
+  @dtgd = params[:dtgd]
+  @phone = params[:phone]
+  db = PG.connect(:dbname => 'address_book', :host => 'localhost')
+  db.exec("INSERT INTO contacts (first, last, age, gender, dtgd, phone) values ('#{@first}', '#{@last}', #{@age}, '#{@gender}', #{@dtgd}, '#{@phone}')")
+  db.close
+  redirect to('/')
+end
+
+
+
+
