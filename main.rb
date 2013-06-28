@@ -33,7 +33,7 @@ get '/new_contact' do
   erb :input
 end
 
-post '/new contact' do
+post '/new_contact' do
   @first = params[:first]
   @last = params[:last]
   @age = params[:age].to_i
