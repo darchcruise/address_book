@@ -1,1 +1,23 @@
+<!--home page should contain links to other pages.-->
+
+<!--links one: allows you to enter new contacts-->
+<p><a href="/new_contact">Enter New Contact</a></p>
+
+<!--Home Page: Header Name-->
+<h1>Address Book</h1>
+
+<!--Home Page: Body (list)-->
+<ul>
+<!--for address list..create loop-->
+<% @contacts.each do |first, value| %>
+
+<li>
+<!--links two: URL/address/first_name -->
+<a href='/address/<%= first["first"] %>'><%= first["first"].capitalize %></a>
+<li>
+<!--close list-->
+<% end %>
+</ul>
+
+
 
